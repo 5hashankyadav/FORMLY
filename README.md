@@ -2,8 +2,6 @@
 
 FORMLY is a Flask-backed dynamic question form builder. Users can create parent questions, add recursively nested child questions, reorder parent questions, and submit the form to review the final hierarchy.
 
-The app runs through Flask without requiring Node.js. A Vite React version is also included for optional frontend development.
-
 ## Features
 
 - Add, edit, and delete parent or child questions.
@@ -17,9 +15,9 @@ The app runs through Flask without requiring Node.js. A Vite React version is al
 
 ## Tech Stack
 
-- Backend: Python, Flask
-- Frontend: HTML, CSS, JavaScript
-- Optional frontend dev build: React, Vite
+- Python
+- Flask
+- HTML, CSS, JavaScript
 
 ## Project Structure
 
@@ -28,9 +26,7 @@ backend/app.py       Flask server
 templates/index.html Flask-served page
 static/app.js        Main form logic
 static/styles.css    App styling
-src/                 Optional Vite React source
 requirements.txt     Python dependencies
-package.json         Optional frontend scripts
 ```
 
 ## Run With Flask
@@ -54,22 +50,6 @@ Health check:
 
 ```text
 http://127.0.0.1:5000/api/health
-```
-
-## Optional Vite Development
-
-Requires Node.js 20 or newer.
-
-```bash
-npm install
-npm run dev
-```
-
-Build for Flask static serving:
-
-```bash
-npm run build
-python backend/app.py
 ```
 
 ## Verification
