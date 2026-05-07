@@ -34,6 +34,9 @@ def create_app():
         if asset_file.exists() and asset_file.is_file():
             return send_from_directory(DIST_DIR, asset_path)
 
+        if not (DIST_DIR / "index.html").exists():
+            return render_template("index.html")
+
         return send_from_directory(DIST_DIR, "index.html")
 
     return app
